@@ -1,24 +1,39 @@
-document.addEventListener("DomContentLoaded", () =>{
-    const openVideoButton = document.getElementById("open-video");
-    const closeVedioButton = document.getElementById("close-video");
-    const videoFrame = document.getElemntById('video-frame');
-    const videoPopup = document.getElementById("video-popup");
-    
-    openVideoButton.addEventListener("click", () =>{
-      videoFrame.src = "https://www.youtube.com/embed/Ua14FNE0TrE?autoplay=1";/*replace vedio id*/
-      video.style.display = "flex";
-    });
-    
-    closeVedioButton.addEventListener("click", () =>{
-       videoFrame.src = "";
-      videoPopup.style.display = "none";
-    });
-    
-  //   close popup when clicking outside the vedio content 
-    videoPopup.addEventListener("click", (e) => {
-      if (e.target === videoPopup){
-        videoFrame.src = "";
-        videoPopup.style.display = "none";
-      }
-    })
-  })
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
+
+function addTask(){
+    if(inputBox.value === ''){
+        alert("You Must Write Something!");
+    } else 
+    {
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = '\u00d7';
+        li.appendChild(span);
+    }
+
+    inputBox.value = '';
+    saveData();
+}
+
+listContainer.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked"); 
+        saveData()
+    } else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData()
+    }
+}, false); 
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
