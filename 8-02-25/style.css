@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body 
+{
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li 
+{
+    list-style: none;
+}
+
+.containerss 
+{
+    padding: 0 20px 0 20px;
+}
+
+:root 
+{
+    --one-font: "Lato", serif;
+    --two-font: "DM Serif Text", serif;
+    --icon-color: #4ba1a7;
+}
+
+
+/* nav start */
+.navbar
+{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar ul li a
+{
+    font-family: var(--one-font);
+    font-weight: 550;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.navbar .navbar-toggler 
+{
+    border: none;
+}
+
+.navbar .navbar-toggler:focus 
+{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* nav End */
+
+
+/* Home start */
+.banner 
+{
+    background-image: url("img/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-reapet;
+    overflow: hidden;
+    height: 700px;
+}
+
+.banner .banner-content 
+{
+    padding: 90px 0 0 90px;
+}
+
+.banner-content h1 
+{
+    font-family: var(--two-font);
+    font-size: 6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.counter  
+{
+    background: black;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.counter-content h2 
+{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: var(--two-font);
+}
+/* Home End */
+
+
+/* About Upper Start */
+.ab-upper i 
+{
+    color: var(--icon-color);
+}
+
+.ab-upper p 
+{
+    font-family: var(--one-font);
+    font-size: 0.9rem;
+}
+/* About Upper End */
+
+
+/* About Start */
+.about .card 
+{
+    height: 330px;
+}
+
+.about .card-1 
+{
+    background: #efeaea;
+}
+
+.about .card-2 
+{
+    background: #f5f8f1;
+}
+
+.about .card-3
+{
+    background: #efe8ef;
+}
+/* About End */
+
+
+/* Reference Start */
+.reference
+{
+    background: url('img/section-banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.reference .card 
+{
+    background: black;
+    margin: 0 0 0 50px;
+}
+/* Reference End */
+
+
+/* Portfolio Start */
+.portfolio .btns-group .button-group
+{
+    background: #f5e9e9;
+}
+
+.portfolio .tabs
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#part-2,
+#part-3,
+#part-4 
+{
+    display: none;
+}
+/* Portfolio End */
+
+
+/* tesimonial start */
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-card {
+    background: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.testimonial-date {
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #524d4d !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #e74c3c !important;
+}
+/* tesimonial End*/
+
+
+/* faq start */
+.accordion .accordion-item 
+{
+    background: #efeaea;
+}
+
+.accordion button
+{
+    background-color: #efeaea;
+}
+/* faq End */
+
+
+/* contact start */
+.contact
+{
+    background: #efeaea;
+}
+
+.contact h1 
+{
+    font-size: 4rem;
+    font-family: var(--two-font);
+}
+/* contact End */
+
+
+/* Footer Start */
+.footer 
+{
+    background: black;
+}
+
+.footer .second-content 
+{
+    font-family: var(--one-font);
+}
+/* Footer End */

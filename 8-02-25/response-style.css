@@ -1,0 +1,54 @@
+/* Home start */
+@media only screen and (max-width: 990px){
+    .counter 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .banner 
+    {
+        height: 600px;
+    }
+
+    .banner .banner-content 
+    {
+        padding: 30px 0 0 90px;
+    }
+
+    .banner-content h1 
+    {
+        font-size: 4rem;
+    }
+
+    .counter   
+    {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .counter-content h2 
+    {
+        font-size: 2.5rem;
+    }
+}
+/* Home End */
+
+
+/* Testimonial Start */
+@media (max-width: 768px) {
+    .swiper {
+        padding: 0 10px;
+    }
+    .swiper-slide {
+        width: 100%;
+    }
+    .testimonial-card {
+        max-width: 100%;
+    }
+}
+/* Testimonial End */
